@@ -1,19 +1,124 @@
-/* charity: water Brand Colors & Fonts
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-Primary Colors:
-- Yellow:     #FFC907
-- Blue:       #2E9DF7
+body, html {
+  /* Use Proxima Nova font for the whole page */
+  font-family: 'Proxima Nova', Arial, sans-serif;
+}
 
-Secondary Colors:
-- Light Blue: #8BD1CB
-- Green:      #4FCB53
-- Orange:     #FF902A
-- Red:        #F5402C
-- Dark Green: #159A48
-- Pink:       #F16061
+/* Header */
+.top-banner {
+  background-color: #fff4cf;
+  padding: 10px 20px;
+}
 
-Fonts:
-- Proxima Nova
-- Avenir
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+}
 
-*/
+.logo img {
+  /* Make the logo image a bit bigger to match the text size */
+  width: 32px; /* increased from 24px */
+  margin-right: 10px;
+}
+
+/* Hero Section */
+.hero {
+  /* Use a local image for the background */
+  background-image: url('img/hero_image.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 90vh;
+  position: relative;
+  display: flex;
+  align-items: flex-end; /* Move content to the bottom */
+  justify-content: center;
+}
+
+.overlay {
+  /* Make sure the overlay also moves content to the bottom */
+  display: flex;
+  align-items: flex-end; /* Move hero-content to the bottom */
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  /* Add some bottom padding to shift the text up a little */
+  padding-bottom: 80px;
+  position: relative;
+}
+
+.hero-content {
+  color: white;
+  text-align: center;
+  max-width: 700px;
+}
+
+.hero-content h1 {
+  color: #77A8BB; /* Set the heading color to a light teal */
+  font-size: 3rem; /* increased from 2.5rem */
+  margin-bottom: 24px; /* slightly more space */
+}
+
+.hero-content p {
+  color: #FFF7E1;
+  font-size: 1.3rem; /* increased from 1.1rem */
+  margin-bottom: 36px; /* slightly more space */
+}
+
+.donate-btn {
+  padding: 12px 25px;
+  background-color: #003366;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.donate-btn:hover {
+  background-color: #3a77ff;
+}
+
+/* Info bar at the top left of hero-content */
+.hero-content-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 24px 0 0 24px;
+  background: rgba(255,255,255,0.7);
+  padding: 8px 16px;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  z-index: 2;
+  font-size: 1rem;
+  color: #0f1625;
+  font-family: 'Proxima Nova', Arial, sans-serif; /* Use Proxima Nova font */
+}
+
+/* Underline and style the "click here" link */
+.hero-content-info .info-link {
+  text-decoration: underline;
+  color: #003366;
+  font-weight: bold;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+}
